@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>VFM | Calculator</title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+ 
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  </head>
+
+
+  <body>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top py-5 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
+        <div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/projlogo.png" height="44" alt="logo" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
+          <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-lg-center align-items-start">
+                <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="index.html">Home</a></li>
+                <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="questionnaire.html">Quiz</a></li>
+                <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="calc.html">Calculator</a></li>
+                <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="cars.html">Cars</a></li>
+                <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="blog.html">Blog</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section id="articles" style="margin-top: 5%;">
+        
+         <div class="container">
+            <div class="row" sr>
+               <div style="text-align: center;">
+                   <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">savings calculator</h3>
+                   <p class=" font-cursive" >Choose a hybrid or electric car calculator, input data and compare it to a gas vehicle</p>
+                </div> 
+                <div style="display: flex; justify-content: center; margin-top: 1%; margin-bottom: 2%;">
+                <div style="display: flex; width: 50%; justify-content: space-between;">
+                  <button class="btnsswhite" onclick="location.href='calc.html'">Electric car</button>
+                  <button class="btnsswhite" onclick="location.href='calch.html'">Hybrid car</button>
+                </div>
+               </div>
+            </div>  
+            
+
+            <div class="calculator" id="electric">
+              <form id="firs">
+                <div class="calculatortop">
+                    <div class="calctoptitle"><h1 class="fs-xl-7 fw-bold text-center otheraqua" style="padding-top: 20px;">Electric Car savings calculator</h1>
+                        <p class="text-center">Compare annual fuel costs between an electric and a gas car, also see how soon an electric vehicle can pay for itself</p>
+                    </div>
+                   
+                    <div class="contentwrap">
+                        <div><h3 class="fs-xl-5 text-center fw-bold green">Your details</h3></div>
+                        <div><h3 class="fs-xl-5 text-center yellow fw-bold">Electric Vehicle</h3></div>
+                        <div><h3 class="fs-xl-5 text-center yellow fw-bold">Gas Vehicle</h3></div>
+                        <div class="firstrowc"> 
+                          <div class="topinputs"><input class="ap" id="mdpw1" type="number" placeholder="Miles driven per week" required></div>
+                          <div class="topinputs"><input class="ap" id="elecost1" step=".01" type="number" placeholder="Local cost per KWhr (1 KwHr)" required></div>
+                          <div class="topinputs"><input class="ap" id="gascost1" step=".01" type="number" placeholder="Local gas price (1 liter)" required></div>
+                        </div>
+                        <!-- Gas car-->
+                        <div class="firstrowc"> 
+                          <div class="topinputs"><input class="ap" id="kmpkwh" step=".01" type="number" placeholder="KM per 1 Kwh" required></div>
+                          <div class="topinputs"><input class="ap" id="EVPrice" type="number" placeholder="Vehicle purchase price (€)" required></div>
+                        </div>
+                         <!-- Electric car-->
+                        <div class="firstrowc"> 
+                          <div class="topinputs"><input class="ap" id="MPL1" type="number" step=".01" placeholder="KM per 1 Liter" required></div>
+                          <div class="topinputs"><input class="ap" id="GVPrice" type="number" placeholder="Vehicle purchase price (€)" required></div>
+                        </div>
+                        
+                    </div>
+                    <div><div class="subbutton"><input type="submit" id="subm" value="Calculate"></div></div>
+                  </form>
+                </div>
+                  <div class="calculatorbottom">
+                    <div class="calctoptitle"><h1 class="fs-xl-7 fw-bold text-center otheraqua" style="padding-top: 20px;">Calculation Results</h1></div>
+                    <div class="reswrap">
+                      <div style="display: flex; position: absolute; width: 100%; height: 100%; justify-content: center; z-index: 1; transform: translate(-20px, 10px);"><img src="assets/img/backpoint.png" style="z-index: 1;" height="600"></div>
+                      <div class="calcresults">
+                        <div class="resbox2">
+                          <h3 class="text-center green" style="margin-top: 5%;">Break Even Point</h3>
+                          <h4 class="jsvalue text-center green" style="margin-top: 10%;"><span id="BEP" class="fd white fw-bold">?</span> Years</h4>
+                        </div>
+                        <div class="resbox3">
+                          <h3 class="text-center" style="margin-top: 5%; color: white;">Yearly Fuel Cost (Electric)</h3>
+                          <h4 class="jsvalue text-center green" style="margin-top: 10%;">€ <span id="YFCE" class="fd white fw-bold">?</span></h4>
+                        </div>
+                      </div>
+                      <div class="calcresults2">
+                        <div class="resbox4">
+                          <h3 class="text-center green" style="margin-top: 5%;">Yearly Savings</h3>
+                          <h4 class="jsvalue text-center green" style="margin-top: 10%;">€ <span id="YS" class="fd fw-bold green">?</span> </h4>
+                        </div>
+                        <div class="resbox5">
+                          <h3 class="text-center" style="margin-top: 5%; color: white;">Yearly Fuel Cost (Gas)</h3>
+                          <h4 class="jsvalue text-center green" style="margin-top: 10%;">€ <span id="YFCG" class="fd white fw-bold">?</span></h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+
+
+              </div>
+
+            <div class="container" style="margin-top: 5%; text-align: center;">
+              <h2 class="white">Break Even Point</h2>
+              <p class="white">This is how soon your fuel savings from switching to an EV makes up <br>
+                 for the difference in purchase price.The lower this number, the sooner that your EV pays for itself.</p>
+                 <h2 class="white">Yearly Savings</h2>
+                 <p class="white">This is how much you save each year if you get an EV.</p>
+            </div>
+
+          
+      </section>
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+        <footer style="position: relative; margin-top: 25%; margin-bottom: 1%; display: flex; justify-content: center;">
+          <div class="size" style="display: flex; justify-content: space-between; width: 800px;">
+              <div class="headertext" style="padding-left: 50; width: 400px; height: 100%; text-align: left;">
+                  <h3 style="font-weight: 600;">We strongly believe</h3>
+                  <p class="text-secondary">that inspiring people to live eco-friendlier lives will go a long way towards establishing a better future</p>
+              </div>
+      
+              <div class="links text-secondary btitle" style="text-align: right; width: 400px;">
+                  <h3 class="btitle">Links</h3>
+                  <div>
+                    <a href="blog.html">Blog</a>
+                    <br>
+                    <a href="calc.html">Calculator</a>
+                    <br>
+                    <a href="questionnaire.html">Quiz</a>  
+                    <br>
+                    <a href="cars.html">Cars</a>
+                  </div>
+              </div>
+          </div>
+        </footer>
+        <div class="text-center">
+          <p class="mb-0 text-secondary fs--1 fw-medium">2023 VFM Ecology Project</p>
+        </div>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+     
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script>
+        var form = document.getElementById("firs");
+        function handleForm(event) { event.preventDefault(); calcEV(); } 
+        form.addEventListener('submit', handleForm);
+        
+
+
+
+        let hybridbox = document.getElementById("hybrid");
+        let electricbox = document.getElementById("electric");
+
+        function turnEVon() {
+            if (electricbox.classList.contains("hidden")) {
+            electricbox.classList.remove("hidden");
+            hybridbox.classList.add("hidden");
+            }
+        }
+        function turnHCon() {
+            if (hybridbox.classList.contains("hidden")) {
+            hybridbox.classList.remove("hidden");
+            electricbox.classList.add("hidden");
+            }
+        }
+
+
+        // CALCULATION
+
+
+        // ELECTRIC VEHICLE CALCULATION
+      function calcEV() {
+
+        //SELF CREDENTIALS
+        const kmperweek = document.querySelector('#mdpw1');
+        const electriCost = document.querySelector('#elecost1');
+        const gasCost = document.querySelector('#gascost1');
+        //EVCAR 
+        const kmperKwh = document.querySelector('#kmpkwh');
+        const electricCarPrice = document.querySelector('#EVPrice');
+        //GasCAR
+        const KMPerLiter = document.querySelector('#MPL1');
+        const gasCarPrice = document.querySelector('#GVPrice');
+
+
+        // FINALS
+
+        const kmAYear = Math.round(kmperweek.value * 52);
+        const gasprice = gasCost.value
+        const eleCost = electriCost.value
+
+        const kmKwh = kmperKwh.value;
+        const EPrice = electricCarPrice.value;
+
+        const KMPerL = KMPerLiter.value;
+        const GPrice = gasCarPrice.value;
+        
+        // Gas car yearly fuel cost
+        const yearlyGasFuelCostG = gasprice * (kmAYear / KMPerL);
+        
+        ////////////////
+
+        
+        const kwhperYear = kmAYear / kmKwh;
+        const yearlyElectricCost = kwhperYear * eleCost;
+        
+
+       // break even point
+        const priceDiff = EPrice - GPrice;
+
+       const diff = yearlyGasFuelCostG - yearlyElectricCost; //
+      const breakEvenPoint = priceDiff / diff;
+
+
+
+
+        const YearFCG = document.getElementById("YFCG");
+        const YearFCE = document.getElementById("YFCE");
+        const breakPoint = document.getElementById("BEP");
+        const totalSavings = document.getElementById("YS");
+        breakPoint.textContent = Math.round(breakEvenPoint * 10) / 10;
+        totalSavings.textContent = Math.round(diff);
+        YearFCE.textContent = Math.round(yearlyElectricCost);
+        YearFCG.textContent = Math.round(yearlyGasFuelCostG);
+
+        const valueFCG = parseInt(YearFCG.textContent);
+        const valueFCE = parseInt(YearFCE.textContent);
+        
+        if (parseInt(totalSavings < 0)) {
+          totalSavings.classList.add("red");
+          totalSavings.classList.remove("green")
+        }
+
+        function unblock2() {
+          document.getElementById("pop2").classList.remove("hidden");
+        }
+        function unblock3() {
+          document.getElementById("pop3").classList.remove("hidden");
+        }
+        function unblock4() {
+          document.getElementById("pop4").classList.remove("hidden");
+        }
+        function unblock5() {
+          document.getElementById("pop5").classList.remove("hidden");
+        }
+
+      }
+
+      document.querySelector('#image1').addEventListener('click', unblock2());
+      document.querySelector('#image2').addEventListener('click', unblock3());
+      document.querySelector('#image3').addEventListener('click', unblock4());
+      document.querySelector('#image4').addEventListener('click', unblock5());
+
+    </script>
+
+
+
+    <script src="vendors/@popperjs/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="vendors/fontawesome/all.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/vanilla-tilt.min.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Volkhov:wght@700&amp;display=swap" rel="stylesheet">
+
+
+
+    <div class="popupwhole hidden" id="popups">
+      
+        <div class="popuptext">
+          <div class="popuptitle">
+            <h1 class="mtext">Environment Impact Test</h1>
+          </div>
+          <div class="popupdesc">
+            <p class="sectext">This test questions you on various things and determines your environmental impact based on them</p>
+          </div>
+        </div>
+        <div class="popupbtnimg">
+          <div class="popimg"><img src="assets/img/popupimg.png"></div>
+          <div class="popupbtn">
+
+             <button class="btnss" id="but" onclick="hide()">No</button>
+             <button class="btnss" id="but" onclick="location.href='questionnaire.html'" >Yes</button>
+
+          </div>
+        </div>
+        
+      </div>
+
+</script>
+
+
+  </body>
+
+</html>
